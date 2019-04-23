@@ -1,3 +1,10 @@
+/**
+ * 2019-04-23
+ * 0.1.1 ver
+ * Kim Yeonho
+ * https://github.com/jadenspace/jdSticky/
+ * https://www.npmjs.com/package/jd-sticy/
+ */
 export function JdSticky(selector, options) {
     this.isIEVer = (function () {
         var rv = true;
