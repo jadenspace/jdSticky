@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <title>jdSticky.module.js</title>
+    <style>
+        html, body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .space {
+            width: 100%;
+            height: 1000px;
+        }
+
+        .nav-wrap {
+            width: 100%;
+            height: 103px;
+        }
+
+        .nav {
+            border-top: 1px solid #767676;
+            border-bottom: 1px solid #767676;
+            background: #15191a;
+            color: #fff;
+        }
+
+        .nav ul {
+            width: 100%;
+            max-width: 1392px;
+            margin: 0 auto;
+        }
+
+        .nav ul:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .nav ul li {
+            float: left;
+            width: 20%;
+            padding: 19px 0;
+            text-align: center;
+        }
+
+        .nav ul li a {
+            display: block;
+            line-height: 63px;
+            border-right: 1px solid #767676;
+            color: #fff;
+            font-size: 28px;
+        }
+
+        .nav ul li:first-child a {
+            border-left: 1px solid #767676;
+            color: #fff;
+        }
+
+        .nav ul li.on,
+        .nav ul li.on a {
+            background: #f2f2f2;
+            color: #2f2f2f;
+            border: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-wrap {
+                height: calc(14.01vw + 2px);
+            }
+
+            .nav ul li {
+                padding: 2.63vw 0;
+            }
+
+            .nav ul li a {
+                font-size: 3.33vw;
+                line-height: 8.75vw
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <section class="space" style="background-color:lightgoldenrodyellow">아래로 스크롤</section>
+        <div class="sticky-area">
+            <div id="stickyNav" class="nav-wrap">
+                <nav class="nav">
+                    <!-- ul,ol -->
+                    <ul class="nav-list">
+                        <li><a class="btn-move-sec" href="#sec1">1</a></li>
+                        <li><a class="btn-move-sec" href="#sec2">2</a></li>
+                        <li><a class="btn-move-sec" href="#sec3">3</a></li>
+                        <li><a class="btn-move-sec" href="#sec4">4</a></li>
+                        <li><a class="btn-move-sec" href="#sec5">5</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section id="sec1" class="space" style="background-color:#f0f0f0;"></section>
+            <section id="sec2" class="space" style="background-color:#ccc;"></section>
+            <section id="sec3" class="space" style="background-color:#f0f0f0;"></section>
+            <section id="sec4" class="space" style="background-color:#ccc;"></section>
+            <section id="sec5" class="space" style="background-color:#f0f0f0;"></section>
+        </div>
+        <section class="space" style="background-color:lightgoldenrodyellow"></section>
+        <section class="space" style="background-color:lightgoldenrodyellow"></section>
+    </div>
+
+<!--IE9+ crossBrowsing (IE9 animate X)-->
+<script src="js/jdSticky.js"></script>
+<!--IE9 animate, IE8 crossBrowsing-->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+<!--<script src="./js/jquery.jdSticky.js"></script>-->
+<script>
+    var sticky = new JdSticky('#stickyNav', {
+        secUse: true,
+        $delegate: '.layout',
+        callback: function(isSticky) {
+            console.log(isSticky)
+        }
+    });
+</script>
+</body>
+</html>

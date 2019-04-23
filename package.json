@@ -1,0 +1,30 @@
+{
+  "name": "jd-sticky",
+  "version": "0.1.0",
+  "description": "Easy-to-custrate sticky navigator plugin",
+  "main": "./js/jdSticky.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KimYeonho",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadenspace/jdSticky.git"
+  },
+  "keywords": [
+    "sticky",
+    "nav",
+    "navigation",
+    "navigator",
+    "jd",
+    "jdsticky",
+    "jd-sticky",
+    "jdSticky"
+  ],
+  "bugs": {
+    "url": "https://github.com/jadenspace/jdSticky/issues",
+    "email": "yeonhokr@gmail.com"
+  },
+  "homepage": "https://github.com/jadenspace/jdSticky#readme"
+}
